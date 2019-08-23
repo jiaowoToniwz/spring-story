@@ -11,9 +11,9 @@
 
 	
 	<groupId>com.yc</groupId>
-	<artifactId>springblog</artifactId>
+	<artifactId>spring-story</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>springblog</name>
+	<name>spring-story</name>
 	<description>Demo project for Spring Boot</description>
 
 	<properties>
