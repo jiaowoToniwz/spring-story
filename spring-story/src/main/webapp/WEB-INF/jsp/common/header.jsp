@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <!DOCTYPE html>
 <header class="clear">
 <img src="img/logo.jpg" >
@@ -52,26 +53,10 @@
     <ul class="nav_1 clear">
     <div class="active"></div>
     <li><a href="javascript:;">首页</a></li>
-    <li><a href="javascript:;">文学</a>
-       <ul class="clear">
-         <li><a href="javascript:;">现代文学</a></li>
-         <li><a href="javascript:;">外国文学</a></li>
-         <li><a href="javascript:;">古典文学</a></li>
-         <li><a href="javascript:;">散文随笔</a></li>
-       </ul>
-    </li>
-    <li><a href="javascript:;">社会学</a></li>
-    <li><a href="javascript:;">心理学</a></li>
-    <li><a href="javascript:;">经济学</a></li>
-    <li><a href="javascript:;">自然科学</a></li>
-    <li><a href="javascript:;">历史</a></li>
-    <li><a href="javascript:;">其他</a>
-       <ul class="clear">
-         <li><a href="javascript:;">旅游攻略</a></li>
-         <li><a href="javascript:;">周刊杂志</a></li>
-         <li><a href="javascript:;">经典短语</a></li>
-       </ul>    
-    </li>
+    <c:forEach items="${cList}" var="c">
+    	<li><a href="javascript:;">${c.caName}</a></li>
+    </c:forEach>  
+   
     <div class="submission">
     <a href="javascript:;"><span class="icon_span"></span>我要投稿</a>
     </div>
